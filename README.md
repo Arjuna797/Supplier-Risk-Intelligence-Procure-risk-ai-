@@ -206,12 +206,4 @@ Open your browser at `http://localhost:8501`.
 
 ---
 
-## 💡 SAP MM Interview Talking Points
 
-When presenting this project in SAP MM or Procurement Analytics interviews:
-1. **Explain the link between ME61 and Machine Learning:**
-   *"In standard SAP MM, transaction `ME61` evaluates vendors on fixed historical weights. Our system augments `ME61` with Random Forest and XGBoost to predict the probability of future supply failure before PO issuance."*
-2. **Explain Single-Source Concentration & Sourcing:**
-   *"We monitor supplier concentration across Material Groups (`MATKL`). When a sole-source vendor exhibits rising defect rates in `QALS` or delivery delays in `EKET`, our recommendation engine immediately identifies alternatives for maintenance in the SAP Source List (`ME01`)."*
-3. **Explain Anomaly Detection with Isolation Forest:**
-   *"Standard reports often miss subtle invoice price creep or sudden defect surges. Isolation Forest automatically detects these multidimensional outliers for early procurement audits."*
