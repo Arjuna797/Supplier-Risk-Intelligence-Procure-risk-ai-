@@ -1,0 +1,113 @@
+{
+    "random_forest": {
+        "accuracy": 0.965,
+        "macro_f1": 0.9588,
+        "classification_report": {
+            "High Risk": {
+                "precision": 0.9666666666666667,
+                "recall": 0.9666666666666667,
+                "f1-score": 0.9666666666666667,
+                "support": 30.0
+            },
+            "Low Risk": {
+                "precision": 0.9915254237288136,
+                "recall": 0.9669421487603306,
+                "f1-score": 0.9790794979079498,
+                "support": 121.0
+            },
+            "Medium Risk": {
+                "precision": 0.9038461538461539,
+                "recall": 0.9591836734693877,
+                "f1-score": 0.9306930693069307,
+                "support": 49.0
+            },
+            "accuracy": 0.965,
+            "macro avg": {
+                "precision": 0.9540127480805447,
+                "recall": 0.9642641629654616,
+                "f1-score": 0.9588130779605156,
+                "support": 200.0
+            },
+            "weighted avg": {
+                "precision": 0.9663151890482399,
+                "recall": 0.965,
+                "f1-score": 0.9653628982145076,
+                "support": 200.0
+            }
+        },
+        "confusion_matrix": [
+            [
+                117,
+                4,
+                0
+            ],
+            [
+                1,
+                47,
+                1
+            ],
+            [
+                0,
+                1,
+                29
+            ]
+        ],
+        "labels": [
+            "Low Risk",
+            "Medium Risk",
+            "High Risk"
+        ],
+        "feature_importance": {
+            "OTIF_Rate": 0.2934,
+            "Financial_Stability_Score": 0.1584,
+            "Defect_Rate_Pct": 0.1533,
+            "ESG_Score": 0.1172,
+            "Contract_Compliance_Rate": 0.0882,
+            "Lead_Time_Days": 0.0768,
+            "Price_Variance_Pct": 0.0488,
+            "Average_Delay_Days": 0.0365,
+            "Geopolitical_Risk_Score": 0.0079,
+            "PO_Count": 0.0079,
+            "Total_Spend_USD": 0.0076,
+            "Single_Source_Flag": 0.0041
+        }
+    },
+    "xgboost": {
+        "r2_score": 0.9941,
+        "rmse": 1.7833,
+        "mae": 1.1134,
+        "feature_importance": {
+            "OTIF_Rate": 0.7288,
+            "Defect_Rate_Pct": 0.1287,
+            "Single_Source_Flag": 0.0567,
+            "Price_Variance_Pct": 0.0331,
+            "Financial_Stability_Score": 0.0249,
+            "ESG_Score": 0.0143,
+            "Geopolitical_Risk_Score": 0.0054,
+            "Contract_Compliance_Rate": 0.0025,
+            "Lead_Time_Days": 0.0018,
+            "PO_Count": 0.0017,
+            "Average_Delay_Days": 0.0013,
+            "Total_Spend_USD": 0.0009
+        }
+    },
+    "kmeans": {
+        "n_clusters": 4,
+        "cluster_labels_map": {
+            "0": "Operational Core Performers",
+            "1": "Strategic Key Partners",
+            "2": "Underperforming / Action Plan",
+            "3": "Critical Risk & Bottleneck"
+        },
+        "cluster_counts": {
+            "1": 513,
+            "2": 251,
+            "3": 131,
+            "0": 105
+        }
+    },
+    "isolation_forest": {
+        "anomalies_detected": 45,
+        "contamination_rate": 0.045
+    }
+}
